@@ -14,16 +14,17 @@ Static Cloudflare Pages landing page for `hoghutbbq.co.uk`.
 Use these settings when connecting the GitHub repository to Cloudflare Pages:
 
 - Framework preset: `None`
-- Build command: leave blank
-- Build output directory: `/`
-- Root directory: `/`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: leave blank unless this site is inside a subfolder
 
-The site has no build step. Cloudflare can publish the repository root directly.
+The build step only copies the static files into `dist` so Cloudflare has a clear output directory.
 
 Manual Wrangler deploy, once authenticated:
 
 ```powershell
-npx wrangler pages deploy . --project-name hog-hut-bbq --branch main
+npm run build
+npx wrangler pages deploy dist --project-name hog-hut-bbq --branch main
 ```
 
 Optional exact bottle renders can be added later as:
