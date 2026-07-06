@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+
+# Local preview/debug output
+.chrome-*/
+sales-*.png
+
+# Dependency/cache folders if tooling is added later
+node_modules/
+.wrangler/
