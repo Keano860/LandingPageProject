@@ -1302,25 +1302,23 @@ h1 span {
 }
 
 .pair-product {
-  --frame-image: url("assets/frames/card-green.png");
   display: grid;
   grid-template-columns: 72px 1fr;
   gap: 22px;
   align-items: center;
   min-height: 190px;
   padding: clamp(24px, 3vw, 36px);
-  border: 24px solid transparent;
-  border-image: var(--frame-image) 28 fill stretch;
-  border-radius: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
   box-shadow: 0 22px 42px rgba(0, 0, 0, 0.32);
 }
 
 .pair-product-red {
-  --frame-image: url("assets/frames/card-burgundy.png");
+  background: linear-gradient(135deg, rgba(88, 28, 17, 0.98), rgba(38, 11, 7, 0.98));
 }
 
 .pair-product-gold {
-  --frame-image: url("assets/frames/card-green.png");
+  background: linear-gradient(135deg, rgba(29, 48, 24, 0.98), rgba(8, 18, 11, 0.98));
 }
 
 .product-number {
@@ -1484,7 +1482,6 @@ h1 span {
 }
 
 .range-card {
-  --frame-image: url("assets/frames/card-green.png");
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: clamp(22px, 3vw, 34px);
@@ -1492,18 +1489,17 @@ h1 span {
   min-height: 350px;
   padding: clamp(28px, 3.5vw, 44px);
   overflow: hidden;
-  border: 28px solid transparent;
-  border-image: var(--frame-image) 30 fill stretch;
-  border-radius: 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
   box-shadow: 0 24px 46px rgba(0, 0, 0, 0.3);
 }
 
 .range-card-red {
-  --frame-image: url("assets/frames/card-burgundy.png");
+  background: linear-gradient(135deg, #381208, #1d0906);
 }
 
 .range-card-gold {
-  --frame-image: url("assets/frames/card-green.png");
+  background: linear-gradient(135deg, #152312, #071009);
 }
 
 .range-bottle {
@@ -1704,16 +1700,8 @@ h1 span {
 }
 
 @media (max-width: 620px) {
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
   .sales-hero h1 {
-    max-width: 100%;
-    font-size: clamp(1.95rem, 8.6vw, 2.45rem);
-    overflow-wrap: anywhere;
+    font-size: clamp(2.25rem, 10.5vw, 3rem);
   }
 
   .sales-hero .hero-buttons,
@@ -1740,9 +1728,7 @@ h1 span {
   .why-copy h2,
   .order-section h2,
   .stockist-copy h2 {
-    max-width: 100%;
-    font-size: clamp(2rem, 9.5vw, 2.65rem);
-    overflow-wrap: anywhere;
+    font-size: clamp(2.25rem, 11vw, 3.2rem);
   }
 
   .pair-product {
@@ -1750,17 +1736,6 @@ h1 span {
     gap: 15px;
     min-height: 0;
     padding: 24px 19px;
-  }
-
-  .pair-product > *,
-  .range-card > *,
-  .range-copy {
-    min-width: 0;
-  }
-
-  .pair-product h3,
-  .range-card h3 {
-    overflow-wrap: anywhere;
   }
 
   .product-number {
